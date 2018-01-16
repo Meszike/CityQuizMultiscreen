@@ -22,64 +22,38 @@
         android:stretchColumns="0,1">
 
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
+            style="@style/tableRow"
             android:paddingLeft="@dimen/double_margin">
 
             <RadioButton
                 android:id="@+id/answer_1_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
+                style="@style/RadioButton_Land"
                 android:text="@string/q_1_a"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/greetings_size"
-                android:textStyle="bold"
                 android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/answer_1_b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
+                style="@style/RadioButton_Land"
                 android:text="@string/q_1_b"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/greetings_size"
-                android:textStyle="bold"
                 android:theme="@style/RadioButtonStyle" />
 
         </TableRow>
 
 
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
+            style="@style/tableRow"
             android:paddingLeft="@dimen/double_margin">
 
             <RadioButton
                 android:id="@+id/answer_1_c"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
+                style="@style/RadioButton_Land"
                 android:text="@string/q_1_c"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/greetings_size"
-                android:textStyle="bold"
                 android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/answer_1_d"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
+                style="@style/RadioButton_Land"
                 android:text="@string/q_1_d"
-                android:textColor="@color/textcolor"
-                android:textSize="@dimen/greetings_size"
-                android:textStyle="bold"
                 android:theme="@style/RadioButtonStyle" />
 
         </TableRow>
@@ -89,47 +63,22 @@
 
     <TextView
         android:id="@+id/solution"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="@dimen/normal_margin"
-        android:layout_marginRight="@dimen/normal_margin"
-        android:layout_marginTop="@dimen/solution_margin"
-        android:fontFamily="serif"
-        android:gravity="center"
-        android:textColor="@color/textcolor"
-        android:textSize="@dimen/little_solution_size"
-        android:textStyle="bold" />
+        style="@style/Solution_land" />
 
 
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/button_Land"
+        android:onClick="submitButton"
+        android:text="@string/submit"
+        android:visibility="visible" />
 
-        <Button
-            android:id="@+id/submit_button"
-            android:visibility="visible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/greetings_size"
-            android:onClick="submitButton"
-            android:text="@string/submit" />
-
-        <Button
-            android:id="@+id/next"
-            android:visibility="invisible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/greetings_size"
-            android:onClick="next"
-            android:text="@string/next" />
-
-
+    <Button
+        android:id="@+id/next"
+        style="@style/button_Land"
+        android:onClick="next"
+        android:text="@string/next"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>

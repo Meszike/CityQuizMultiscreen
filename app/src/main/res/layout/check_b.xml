@@ -16,7 +16,6 @@
         android:id="@+id/line2"
         style="@style/LinearLayout">
 
-
         <CheckBox
             android:id="@+id/choice_1"
             style="@style/RadioButton"
@@ -51,32 +50,17 @@
 
     <Button
         android:id="@+id/submit_button"
-        android:visibility="visible"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:padding="@dimen/padding_left"
-        android:layout_marginBottom="@dimen/padding_left"
+        style="@style/button"
         android:onClick="submitButton"
         android:text="@string/submit"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/greetings_size" />
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/next"
-        android:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:padding="@dimen/padding_left"
-        android:layout_marginBottom="@dimen/padding_left"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/greetings_size"
+        style="@style/button"
         android:onClick="next"
         android:text="@string/next"
-         />
+        android:visibility="invisible" />
 
 
 </RelativeLayout>

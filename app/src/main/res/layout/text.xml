@@ -13,48 +13,29 @@
         android:text="@string/third_q" />
 
     <EditText
-        android:backgroundTint="@color/textcolor"
-        android:textCursorDrawable="@color/textcolor"
         android:id="@+id/txtAnswer"
         style="@style/HintText"
-        android:hint="@string/q3_hint"/>
-
+        android:backgroundTint="@color/textcolor"
+        android:hint="@string/q3_hint"
+        android:textCursorDrawable="@color/textcolor" />
 
     <TextView
         android:id="@+id/solution"
-        android:layout_below="@id/txtAnswer"
-        style="@style/Solution" />
-
-
+        style="@style/Solution"
+        android:layout_below="@id/txtAnswer" />
 
     <Button
         android:id="@+id/submit_button"
-        android:visibility="visible"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/padding_top"
-        android:padding="@dimen/padding_top"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/greetings_size"
+        style="@style/button"
         android:onClick="submitButton"
-        android:text="@string/submit" />
+        android:text="@string/submit"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/next"
-        android:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/padding_left"
-        android:padding="@dimen/padding_left"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/greetings_size"
+        style="@style/button"
         android:onClick="next"
-        android:text="@string/next" />
-
-
+        android:text="@string/next"
+        android:visibility="invisible" />
 
 </RelativeLayout>

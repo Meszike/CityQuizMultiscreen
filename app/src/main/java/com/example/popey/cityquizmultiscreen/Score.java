@@ -15,7 +15,7 @@ public class Score extends AppCompatActivity {
     public int total = 0;
     public int QuestionNumber;
     TextView scoreView, sumView;
-    Button restartButton;
+
 
 
     @Override

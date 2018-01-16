@@ -7,43 +7,20 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="@dimen/normal_margin"
-        android:layout_marginTop="@dimen/double_margin"
-        android:fontFamily="serif"
-        android:text="@string/app_name"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/heading_size" />
+        style="@style/TextView_land"
+        android:text="@string/app_name" />
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/StartButton_Land"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/normal_margin"
-        android:fontFamily="serif"
-        android:padding="@dimen/normal_margin"
-        android:text="@string/start_button"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/greetings_size" />
+        android:text="@string/start_button" />
 
     <TextView
         android:id="@+id/greetings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        style="@style/Greetings_land"
         android:layout_below="@id/startButton"
-        android:layout_centerInParent="true"
-        android:fontFamily="serif"
-        android:gravity="center"
-        android:text="@string/greetings"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/greetings_size"
-        android:textStyle="bold" />
+        android:text="@string/greetings" />
 
 
 </RelativeLayout>

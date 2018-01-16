@@ -15,120 +15,61 @@
     <TableLayout
         android:id="@+id/line2"
         style="@style/LinearLayout2"
-        android:stretchColumns="0,1"
+        android:layout_below="@id/question"
         android:gravity="center"
-        android:layout_below="@id/question">
+        android:stretchColumns="0,1">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1">
+        <TableRow style="@style/tableRow">
 
+            <CheckBox
+                android:id="@+id/choice_1"
+                style="@style/checkBoxStyle_land"
+                android:text="@string/q_2_a"
+                android:theme="@style/checkBoxStyle" />
 
-        <CheckBox
-            android:id="@+id/choice_1"
-            android:text="@string/q_2_a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/normal_margin"
-            android:fontFamily="serif"
-            android:textColor="@color/textcolor"
-            android:textSize="@dimen/greetings_size"
-            android:textStyle="bold"
-            android:theme="@style/checkBoxStyle" />
-
-        <CheckBox
-            android:id="@+id/choice_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/normal_margin"
-            android:fontFamily="serif"
-            android:textColor="@color/textcolor"
-            android:textSize="@dimen/greetings_size"
-            android:textStyle="bold"
-            android:text="@string/q_2_b"
-            android:theme="@style/checkBoxStyle" />
+            <CheckBox
+                android:id="@+id/choice_2"
+                style="@style/checkBoxStyle_land"
+                android:text="@string/q_2_b"
+                android:theme="@style/checkBoxStyle" />
 
         </TableRow>
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1">
-        <CheckBox
-            android:id="@+id/choice_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/normal_margin"
-            android:fontFamily="serif"
-            android:textColor="@color/textcolor"
-            android:textSize="@dimen/greetings_size"
-            android:textStyle="bold"
-            android:text="@string/q_2_c"
-            android:theme="@style/checkBoxStyle" />
+        <TableRow style="@style/tableRow">
+
+            <CheckBox
+                android:id="@+id/choice_3"
+                style="@style/checkBoxStyle_land"
+                android:text="@string/q_2_c"
+                android:theme="@style/checkBoxStyle" />
 
 
-
-        <CheckBox
-            android:id="@+id/choice_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/normal_margin"
-            android:fontFamily="serif"
-            android:textColor="@color/textcolor"
-            android:textSize="@dimen/greetings_size"
-            android:textStyle="bold"
-            android:text="@string/q_2_d"
-            android:theme="@style/checkBoxStyle" />
+            <CheckBox
+                android:id="@+id/choice_4"
+                style="@style/checkBoxStyle_land"
+                android:text="@string/q_2_d"
+                android:theme="@style/checkBoxStyle" />
         </TableRow>
 
     </TableLayout>
 
     <TextView
         android:id="@+id/solution"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="@dimen/normal_margin"
-        android:layout_marginRight="@dimen/normal_margin"
-        android:layout_marginTop="@dimen/solution_margin"
-        android:fontFamily="serif"
-        android:gravity="center"
-        android:textColor="@color/textcolor"
-        android:textSize="@dimen/little_solution_size"
-        android:textStyle="bold" />
+        style="@style/Solution_land" />
 
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/button_Land"
+        android:onClick="submitButton"
+        android:text="@string/submit"
+        android:visibility="visible" />
 
-
-        <Button
-            android:id="@+id/submit_button"
-            android:visibility="visible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-           android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/greetings_size"
-            android:onClick="submitButton"
-            android:text="@string/submit" />
-
-        <Button
-            android:id="@+id/next"
-            android:visibility="invisible"
-            style="@style/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/greetings_size"
-            android:onClick="next"
-            android:text="@string/next" />
-
+    <Button
+        android:id="@+id/next"
+        style="@style/button_Land"
+        android:onClick="next"
+        android:text="@string/next"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>

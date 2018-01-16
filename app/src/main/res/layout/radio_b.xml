@@ -1,7 +1,6 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-style="@style/RelativeLayout"
+    style="@style/RelativeLayout"
     tools:context="com.example.popey.cityquizmultiscreen.MainActivity">
 
     <ImageView
@@ -15,11 +14,7 @@ style="@style/RelativeLayout"
 
     <RadioGroup
         android:id="@+id/answers_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question"
-        android:layout_margin="@dimen/normal_margin"
-        android:orientation="vertical">
+        style="@style/RadioGroup">
 
         <RadioButton
             android:id="@+id/answer_1_a"
@@ -49,41 +44,20 @@ style="@style/RelativeLayout"
 
     <TextView
         android:id="@+id/solution"
-        android:layout_below="@id/answers_1"
-        style="@style/Solution2" />
+        style="@style/Solution2"
+        android:layout_below="@id/answers_1" />
 
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/button"
+        android:onClick="submitButton"
+        android:text="@string/submit"
+        android:visibility="visible" />
 
-
-        <Button
-            android:id="@+id/submit_button"
-            android:visibility="visible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/padding_left"
-            android:padding="@dimen/padding_left"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/greetings_size"
-            android:onClick="submitButton"
-            android:text="@string/submit" />
-
-        <Button
-            android:id="@+id/next"
-            android:visibility="invisible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/padding_left"
-            android:padding="@dimen/padding_left"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/greetings_size"
-            android:onClick="next"
-            android:text="@string/next" />
-
-
-
-
-
+    <Button
+        android:id="@+id/next"
+        style="@style/button"
+        android:onClick="next"
+        android:text="@string/next"
+        android:visibility="invisible" />
 </RelativeLayout>
