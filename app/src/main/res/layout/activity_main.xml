@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RelativeLayout"
+    tools:context="com.example.popey.cityquizmultiscreen.MainActivity">
+
+    <TextView
+        style="@style/TextView"
+        android:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/startButton"
+        style="@style/StartButton"
+        android:layout_above="@id/greetings"
+        android:text="@string/start_button" />
+
+    <TextView
+        android:id="@+id/greetings"
+        style="@style/Greetings"
+        android:text="@string/greetings" />
+
+
+</RelativeLayout>

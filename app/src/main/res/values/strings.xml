@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">City Quiz 2</string>
+
+    <string name="greetings">How many capitals of countries do you know? \nYou have to answer 7 questions. \nAre you ready?\nPress START!</string>
+    <string name="start_button">start</string>
+    <string name="submit">Submit Answers</string>
+    <string name="restart">restart</string>
+    <string name="you_got">Your score is </string>
+    <string name="out_of">out of 7. Press Start to restart the quiz.</string>
+    <string name="out_of2">/7</string>
+    <string name="q3_hint">Type your answer here.</string>
+    <string name="check">SUBMIT</string>
+    <string name="next">NEXT</string>
+    <string name="no_selection">Please select an answer!</string>
+
+    <string name="question1">Question 1</string>
+    <string name="first_q">7/1 \nWhat is the capital city of Canada?</string>
+    <string name="q_1_a">Washington</string>
+    <string name="q_1_b">Ottawa</string>
+    <string name="q_1_c">New York</string>
+    <string name="q_1_d">Dublin</string>
+
+    <string name="question2">Question 2</string>
+    <string name="second_q">7/2\nWhich countries are the capital of Kingston?</string>
+    <string name="q_2_a">Jamaica</string>
+    <string name="q_2_b">Norfolk Island</string>
+    <string name="q_2_c">Ukraine</string>
+    <string name="q_2_d">Afghanistan</string>
+
+    <string name="question3">Question 3</string>
+    <string name="good_answer1">London</string>
+    <string name="third_q">7/3 \nWhat is the capital city of United Kingdom?</string>
+
+    <string name="question4">Question 4</string>
+    <string name="fourth_q">7/4 \nWhat is the capital city of Hungary?</string>
+    <string name="q_4_a">Bucharest</string>
+    <string name="q_4_b">Berlin</string>
+    <string name="q_4_c">Zagreb</string>
+    <string name="q_4_d">Budapest</string>
+
+
+    <string name="question5">Question 5</string>
+    <string name="good_answer2">Copenhagen</string>
+    <string name="fifth_q">7/5 \nWhat is the capital city of Denmark?</string>
+
+    <string name="question6">Question 6</string>
+    <string name="sixth_q">7/6 \nWhat is the capital city of Australia?</string>
+    <string name="q_6_a">Caracas   ‍ </string>
+    <string name="q_6_b">Dublin</string>
+    <string name="q_6_c">Canberra</string>
+    <string name="q_6_d">London</string>
+
+    <string name="question7">Question 7</string>
+    <string name="seventh_q">7/7 \nWhich countries are the capital of Georgetown? </string>
+    <string name="q_7_a">Ascension Island</string>
+    <string name="q_7_b">United States</string>
+    <string name="q_7_c">Guyana   ‍      ‍      ‍   </string>
+    <string name="q_7_d">Japan</string>
+
+    <string name="correct">Correct!</string>
+    <string name="wrong_solution">Wrong! The good answer is:  </string>
+    <string name="wrong_solutions">Wrong! The good answers are:  </string>
+
+    <string name="end">Restart</string>
+    <string name="your_score">Your Score:</string>
+    <string name="score3">0</string>
+    <string name="score4">/</string>
+
+</resources>

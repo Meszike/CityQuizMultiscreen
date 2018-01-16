@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RelativeLayout">
+
+    <ImageView
+        android:id="@+id/questionImage"
+        style="@style/TextFieldImage" />
+
+    <TextView
+        android:id="@+id/question"
+        style="@style/TextFieldText"
+        android:text="@string/third_q" />
+
+    <EditText
+        android:backgroundTint="@color/textcolor"
+        android:textCursorDrawable="@color/textcolor"
+        android:id="@+id/txtAnswer"
+        style="@style/HintText"
+        android:hint="@string/q3_hint"/>
+
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/solution_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/little_solution_size"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/submit_button"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/greetings_size"
+        android:onClick="submitButton"
+        android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/next"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/greetings_size"
+        android:onClick="next"
+        android:text="@string/next" />
+</RelativeLayout>

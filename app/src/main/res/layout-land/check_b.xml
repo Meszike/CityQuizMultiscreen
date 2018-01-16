@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RelativeLayout">
+
+
+    <ImageView
+        android:id="@+id/questionImage"
+        style="@style/TextFieldImage" />
+
+    <TextView
+        android:id="@+id/question"
+        style="@style/TextFieldText"
+        android:text="@string/second_q" />
+
+    <TableLayout
+        android:id="@+id/line2"
+        style="@style/LinearLayout2"
+        android:stretchColumns="0,1"
+        android:gravity="center"
+        android:layout_below="@id/question">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1">
+
+
+        <CheckBox
+            android:id="@+id/choice_1"
+            android:text="@string/q_2_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:fontFamily="serif"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/greetings_size"
+            android:textStyle="bold"
+            android:theme="@style/checkBoxStyle" />
+
+        <CheckBox
+            android:id="@+id/choice_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:fontFamily="serif"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/greetings_size"
+            android:textStyle="bold"
+            android:text="@string/q_2_b"
+            android:theme="@style/checkBoxStyle" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1">
+        <CheckBox
+            android:id="@+id/choice_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:fontFamily="serif"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/greetings_size"
+            android:textStyle="bold"
+            android:text="@string/q_2_c"
+            android:theme="@style/checkBoxStyle" />
+
+
+
+        <CheckBox
+            android:id="@+id/choice_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:fontFamily="serif"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/greetings_size"
+            android:textStyle="bold"
+            android:text="@string/q_2_d"
+            android:theme="@style/checkBoxStyle" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/solution_margin"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/little_solution_size"
+        android:textStyle="bold" />
+
+
+
+        <Button
+            android:id="@+id/submit_button"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+           android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/greetings_size"
+            android:onClick="submitButton"
+            android:text="@string/submit" />
+
+        <Button
+            android:id="@+id/next"
+            android:visibility="invisible"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/greetings_size"
+            android:onClick="next"
+            android:text="@string/next" />
+
+
+
+</RelativeLayout>

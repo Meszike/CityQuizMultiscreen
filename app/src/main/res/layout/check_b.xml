@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RelativeLayout">
+
+
+    <ImageView
+        android:id="@+id/questionImage"
+        style="@style/TextFieldImage" />
+
+    <TextView
+        android:id="@+id/question"
+        style="@style/TextFieldText"
+        android:text="@string/second_q" />
+
+    <LinearLayout
+        android:id="@+id/line2"
+        style="@style/LinearLayout">
+
+
+        <CheckBox
+            android:id="@+id/choice_1"
+            style="@style/RadioButton"
+            android:text="@string/q_2_a"
+            android:theme="@style/checkBoxStyle" />
+
+        <CheckBox
+            android:id="@+id/choice_2"
+            style="@style/RadioButton"
+            android:text="@string/q_2_b"
+            android:theme="@style/checkBoxStyle" />
+
+        <CheckBox
+            android:id="@+id/choice_3"
+            style="@style/RadioButton"
+            android:text="@string/q_2_c"
+            android:theme="@style/checkBoxStyle" />
+
+        <CheckBox
+            android:id="@+id/choice_4"
+            style="@style/RadioButton"
+            android:text="@string/q_2_d"
+            android:theme="@style/checkBoxStyle" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/solution"
+        style="@style/Solution2"
+        android:layout_below="@id/line2" />
+
+
+    <Button
+        android:id="@+id/submit_button"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/padding_left"
+        android:layout_marginBottom="@dimen/padding_left"
+        android:onClick="submitButton"
+        android:text="@string/submit"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/greetings_size" />
+
+    <Button
+        android:id="@+id/next"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/padding_left"
+        android:layout_marginBottom="@dimen/padding_left"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/greetings_size"
+        android:onClick="next"
+        android:text="@string/next"
+         />
+
+
+</RelativeLayout>

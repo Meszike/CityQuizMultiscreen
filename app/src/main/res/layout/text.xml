@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RelativeLayout">
+
+    <ImageView
+        android:id="@+id/questionImage"
+        style="@style/TextFieldImage" />
+
+    <TextView
+        android:id="@+id/question"
+        style="@style/TextFieldText"
+        android:padding="@dimen/bottom_size"
+        android:text="@string/third_q" />
+
+    <EditText
+        android:backgroundTint="@color/textcolor"
+        android:textCursorDrawable="@color/textcolor"
+        android:id="@+id/txtAnswer"
+        style="@style/HintText"
+        android:hint="@string/q3_hint"/>
+
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_below="@id/txtAnswer"
+        style="@style/Solution" />
+
+
+
+    <Button
+        android:id="@+id/submit_button"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/padding_top"
+        android:padding="@dimen/padding_top"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/greetings_size"
+        android:onClick="submitButton"
+        android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/next"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/padding_left"
+        android:padding="@dimen/padding_left"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/greetings_size"
+        android:onClick="next"
+        android:text="@string/next" />
+
+
+
+</RelativeLayout>

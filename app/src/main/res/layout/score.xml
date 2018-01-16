@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RelativeLayout">
+
+
+    <TextView
+        android:id="@+id/result"
+        style="@style/Score"
+        android:text="@string/your_score" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        style="@style/LinearLayout2"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/restartButton">
+
+        <TextView
+            android:id="@+id/right"
+            style="@style/Score_text"
+            android:text="@string/score3"
+            android:textSize="@dimen/score_text_size1" />
+
+        <TextView
+            style="@style/Score_text"
+            android:text="@string/score4"
+            android:textSize="@dimen/score_text_size2" />
+
+        <TextView
+            android:id="@+id/sum"
+            style="@style/Score_text"
+            android:text="@string/score3"
+            android:textSize="@dimen/score_text_size2" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/restartButton"
+        style="@style/Restart_Button"
+        android:onClick="restartButton"
+        android:text="@string/end" />
+
+</RelativeLayout>

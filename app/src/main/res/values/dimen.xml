@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_left">8dp</dimen>
+    <dimen name="padding_top">12dp</dimen>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="margin2">24dp</dimen>
+    <dimen name="double_margin">32dp</dimen>
+    <dimen name="bottom_size">40dp</dimen>
+    <dimen name="triple_margin">48dp</dimen>
+    <dimen name="margin_top">50dp</dimen>
+    <dimen name="margin_bottom">70dp</dimen>
+    <dimen name="big_margin">100dp</dimen>
+    <dimen name="solution_margin">120dp</dimen>
+    <dimen name="big_marginLeft">130dp</dimen>
+    <dimen name="padding_bottom">150dp</dimen>
+
+    <dimen name="little_solution_size">16sp</dimen>
+    <dimen name="solution_size">18sp</dimen>
+    <dimen name="buttonText_size">20sp</dimen>
+    <dimen name="greetings_size">25sp</dimen>
+    <dimen name="heading_size">50sp</dimen>
+    <dimen name="result_size">70sp</dimen>
+    <dimen name="score_text_size2">120sp</dimen>
+    <dimen name="score_text_size1">150sp</dimen>
+</resources>
