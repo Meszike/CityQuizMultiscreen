@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 
 public class Third_Question extends AppCompatActivity {
-
+    //global variables
     ImageView questionImage;
     TextView question, solution;
     EditText txtAnswer;
@@ -27,10 +27,12 @@ public class Third_Question extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.text);
-
+//sent score as intent
         Bundle extras = getIntent().getExtras();
         total = extras.getInt("total");
         QuestionNumber = extras.getInt("QuestionNumber");
+
+        //which third question global variables
         questionImage = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         solution = findViewById(R.id.solution);
@@ -40,15 +42,20 @@ public class Third_Question extends AppCompatActivity {
         questionImage.setImageResource(R.drawable.question3);
     }
 
+    //submitButton click
     public void submitButton(View view) {
         String answer = txtAnswer.getText().toString().toLowerCase().trim();
+        //if answer is correct
         if (answer.equals("london")) {
             total += 1;
             solution.setText(getString(R.string.correct));
 
-        } else {
+        }
+        //if answer is not  correct
+        else {
             solution.setText(getString(R.string.wrong_solution) + " " + (getString(R.string.good_answer1)));
         }
+        //change button
         checkButton.setVisibility(View.INVISIBLE);
         next.setVisibility(View.VISIBLE);
 

@@ -17,24 +17,25 @@ import android.widget.Toast;
  */
 
 public class Second_Question extends AppCompatActivity {
-
+    //global variables
     ImageView questionImage;
     TextView question;
     CheckBox choice1, choice2, choice3, choice4;
     TextView solution = null;
-    public int total;
     Button submitButton, next;
+    public int total;
     public int QuestionNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_b);
-
+//sent score as intent
         Bundle extras = getIntent().getExtras();
         total = extras.getInt("total");
         QuestionNumber = extras.getInt("QuestionNumber");
 
+//which second question global variables
         questionImage = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         choice1 = findViewById(R.id.choice_1);
@@ -50,7 +51,7 @@ public class Second_Question extends AppCompatActivity {
 
     //submitButton click
     public void submitButton(View view) {
-        //if any answer is checked
+        //if there is an answer
         if (choice1.isChecked() || choice2.isChecked() || choice3.isChecked() || choice4.isChecked()) {
 
             if (choice1.isChecked() && choice2.isChecked()) {
@@ -66,7 +67,7 @@ public class Second_Question extends AppCompatActivity {
                 choice4.setTextColor(ContextCompat.getColor(Second_Question.this, R.color.colorRed));
                 solution.setText(getString(R.string.wrong_solutions) + " " + (getString(R.string.q_2_a)) + ", " + (getString(R.string.q_2_b)));
             }
-
+            //change button
             submitButton.setVisibility(View.INVISIBLE);
             next.setVisibility(View.VISIBLE);
         } else {

@@ -17,16 +17,16 @@ import android.widget.Toast;
  */
 
 public class First_Question extends AppCompatActivity {
-
+    //global variables
     ImageView image1;
     TextView question;
     RadioGroup g1group;
     RadioButton q1_aButton, q1_bButton, q1_cButton, q1_dButton;
     TextView solution2 = null;
-    public int total = 0;
-    public int QuestionNumber = 0;
     Button submitButton;
     Button next = null;
+    public int total = 0;
+    public int QuestionNumber = 0;
 
 
     @Override
@@ -34,11 +34,12 @@ public class First_Question extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.radio_b);
 
+        //sent score as intent
         Bundle extras = getIntent().getExtras();
         total = extras.getInt("total");
         QuestionNumber = extras.getInt("QuestionNumber");
 
-        //first question global variables
+        //which first question global variables
         image1 = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         g1group = findViewById(R.id.answers_1);
@@ -53,8 +54,9 @@ public class First_Question extends AppCompatActivity {
 
     }
 
-
+    //submitButton click
     public void submitButton(View view) {
+        // if there is an answer
         if (q1_aButton.isChecked() || q1_bButton.isChecked() || q1_cButton.isChecked() || q1_dButton.isChecked()) {
 
             if (q1_bButton.isChecked()) {
@@ -69,9 +71,12 @@ public class First_Question extends AppCompatActivity {
                 q1_dButton.setTextColor(ContextCompat.getColor(First_Question.this, R.color.colorRed));
                 solution2.setText(getString(R.string.wrong_solution) + " " + (getString(R.string.q_1_b)));
             }
+            //change button
             submitButton.setVisibility(View.INVISIBLE);
             next.setVisibility(View.VISIBLE);
-        } else {
+        } else
+        //if there is not an answer
+        {
             Toast ToastMessage = Toast.makeText(getApplicationContext(), (R.string.no_selection), Toast.LENGTH_SHORT);
             View toastView = ToastMessage.getView();
             toastView.setBackgroundColor(ContextCompat.getColor(First_Question.this, R.color.colorRed));
@@ -80,8 +85,7 @@ public class First_Question extends AppCompatActivity {
 
     }
 
-
-    //checkButton click
+    //nextButton click
     public void next(View view) {
         QuestionNumber += 1;
         Intent nextQuestion = (new Intent(First_Question.this, Second_Question.class));
