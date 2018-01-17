@@ -33,8 +33,10 @@ public class Score extends AppCompatActivity {
     }
 
     public void restartButton(View view) {
+        finish();
         Intent intent = new Intent(Score.this, MainActivity.class);
         startActivity(intent);
+
     }
 
 

@@ -59,16 +59,16 @@ public class Seventh_Question extends AppCompatActivity {
     public void submitButton(View view) {
         // if there is an answer
         if (choice1.isChecked() || choice2.isChecked() || choice3.isChecked() || choice4.isChecked()) {
-            if (choice1.isChecked() && choice2.isChecked()) {
+            if (choice1.isChecked() && choice3.isChecked()) {
                 //if answer is correct
                 choice1.setTextColor(ContextCompat.getColor(Seventh_Question.this, R.color.colorGreen));
-                choice2.setTextColor(ContextCompat.getColor(Seventh_Question.this, R.color.colorGreen));
+                choice3.setTextColor(ContextCompat.getColor(Seventh_Question.this, R.color.colorGreen));
                 solution.setText(getString(R.string.correct));
                 total += 1;
 
             } else {
                 //if answer is not  correct
-                choice3.setTextColor(ContextCompat.getColor(Seventh_Question.this, R.color.colorRed));
+                choice2.setTextColor(ContextCompat.getColor(Seventh_Question.this, R.color.colorRed));
                 choice4.setTextColor(ContextCompat.getColor(Seventh_Question.this, R.color.colorRed));
                 solution.setText(getString(R.string.wrong_solutions) + " " + (getString(R.string.q_7_a)) + ", " + (getString(R.string.q_7_c)));
             }
