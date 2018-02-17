@@ -15,7 +15,9 @@ import android.widget.TextView;
 
 
 public class Third_Question extends AppCompatActivity {
-    //global variables
+    /**
+     * Variables and elements
+     */
     ImageView questionImage;
     TextView question, solution;
     EditText txtAnswer;
@@ -27,12 +29,16 @@ public class Third_Question extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.text);
-//sent score as intent
+        /**
+         * Sent score as intent
+         */
         Bundle extras = getIntent().getExtras();
         total = extras.getInt("total");
         QuestionNumber = extras.getInt("QuestionNumber");
 
-        //which third question global variables
+        /**
+         * which third question's global variables
+         */
         questionImage = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         solution = findViewById(R.id.solution);
@@ -42,33 +48,42 @@ public class Third_Question extends AppCompatActivity {
         questionImage.setImageResource(R.drawable.question3);
     }
 
-    //submitButton click
+
+    /**
+     * submitButton click
+     */
     public void submitButton(View view) {
         String answer = txtAnswer.getText().toString().toLowerCase().trim();
-        //if answer is correct
+        /**
+         * if answer is correct
+         */
         if (answer.equals("london")) {
             total += 1;
             solution.setText(getString(R.string.correct));
-
         }
-        //if answer is not  correct
+        /**
+         * if answer is not correct
+         */
         else {
             solution.setText(getString(R.string.wrong_solution) + " " + (getString(R.string.good_answer1)));
         }
-        //change button
+        /**
+         * change button
+         */
         checkButton.setVisibility(View.INVISIBLE);
         next.setVisibility(View.VISIBLE);
 
     }
 
-    //checkButton click
+    /**
+     * nextButton click
+     */
     public void next(View view) {
         QuestionNumber += 1;
         Intent nextQuestion = (new Intent(Third_Question.this, Fourth_Question.class));
         nextQuestion.putExtra("total", total);
         nextQuestion.putExtra("QuestionNumber", QuestionNumber);
         startActivity(nextQuestion);
-
 
     }
 

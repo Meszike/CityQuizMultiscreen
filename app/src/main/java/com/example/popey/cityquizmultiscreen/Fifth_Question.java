@@ -14,7 +14,9 @@ import android.widget.TextView;
  */
 
 public class Fifth_Question extends AppCompatActivity {
-    //global variables
+    /**
+     * Variables and elements
+     */
     ImageView questionImage;
     TextView question, solution;
     EditText txtAnswer;
@@ -27,12 +29,16 @@ public class Fifth_Question extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.text);
 
-        //sent score as intent
+        /**
+         * Sent score as intent
+         */
         Bundle extras = getIntent().getExtras();
         total = extras.getInt("total");
         QuestionNumber = extras.getInt("QuestionNumber");
 
-        //which fifth question global variables
+        /**
+         * which fifth question's global variables
+         */
         questionImage = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         solution = findViewById(R.id.solution);
@@ -43,23 +49,34 @@ public class Fifth_Question extends AppCompatActivity {
         question.setText(R.string.fifth_q);
 
     }
-    //submitButton click
+    /**
+     * submitButton click
+     */
     public void submitButton(View view) {
-        //if answer is correct
+        /**
+         * if answer is correct
+         */
         String answer = txtAnswer.getText().toString().toLowerCase().trim();
         if (answer.equals("copenhagen")) {
             total += 1;
             solution.setText(getString(R.string.correct));
 
         } else {
-            //if answer is not  correct
+            /**
+             * if answer is not correct
+             */
             solution.setText(getString(R.string.wrong_solution) + " " + (getString(R.string.good_answer2)));
         }
-        //change button
+        /**
+         * change button
+         */
         checkButton.setVisibility(View.INVISIBLE);
         next.setVisibility(View.VISIBLE);
     }
-    //checkButton click
+
+    /**
+     * nextButton click
+     */
     public void next(View view) {
         QuestionNumber += 1;
         Intent nextQuestion = (new Intent(Fifth_Question.this, Sixth_Question.class));

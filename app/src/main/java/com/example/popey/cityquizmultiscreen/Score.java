@@ -17,13 +17,15 @@ public class Score extends AppCompatActivity {
     TextView scoreView, sumView;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.score);
         Bundle extras = getIntent().getExtras();
-        //display score
+
+        /**
+         * Display score on the screen.
+         */
         scoreView = findViewById(R.id.right);
         total = extras.getInt("total");
         scoreView.setText(String.valueOf(total));
@@ -32,6 +34,9 @@ public class Score extends AppCompatActivity {
         sumView.setText(String.valueOf(QuestionNumber));
     }
 
+       /**
+       * Restart the app.
+       */
     public void restartButton(View view) {
         finish();
         Intent intent = new Intent(Score.this, MainActivity.class);

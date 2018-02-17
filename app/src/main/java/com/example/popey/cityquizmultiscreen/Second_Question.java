@@ -17,7 +17,9 @@ import android.widget.Toast;
  */
 
 public class Second_Question extends AppCompatActivity {
-    //global variables
+    /**
+     * Variables and elements
+     */
     ImageView questionImage;
     TextView question;
     CheckBox choice1, choice2, choice3, choice4;
@@ -30,12 +32,16 @@ public class Second_Question extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_b);
-//sent score as intent
+        /**
+         * Sent score as intent
+         */
         Bundle extras = getIntent().getExtras();
         total = extras.getInt("total");
         QuestionNumber = extras.getInt("QuestionNumber");
 
-//which second question global variables
+        /**
+         * which second question's global variables
+         */
         questionImage = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         choice1 = findViewById(R.id.choice_1);
@@ -49,25 +55,35 @@ public class Second_Question extends AppCompatActivity {
 
     }
 
-    //submitButton click
+    /**
+     * submitButton click
+     */
     public void submitButton(View view) {
-        //if there is an answer
+        /**
+         * if there is an answer
+         */
         if (choice1.isChecked() || choice2.isChecked() || choice3.isChecked() || choice4.isChecked()) {
 
             if (choice1.isChecked() && choice2.isChecked()) {
-                //if answer is correct
+                /**
+                 * if answer is correct
+                 */
                 choice1.setTextColor(ContextCompat.getColor(Second_Question.this, R.color.colorGreen));
                 choice2.setTextColor(ContextCompat.getColor(Second_Question.this, R.color.colorGreen));
                 solution.setText(getString(R.string.correct));
                 total += 1;
 
             } else {
-                //if answer is not  correct
+                /**
+                 * if answer is not correct
+                 */
                 choice3.setTextColor(ContextCompat.getColor(Second_Question.this, R.color.colorRed));
                 choice4.setTextColor(ContextCompat.getColor(Second_Question.this, R.color.colorRed));
                 solution.setText(getString(R.string.wrong_solutions) + " " + (getString(R.string.q_2_a)) + ", " + (getString(R.string.q_2_b)));
             }
-            //change button
+            /**
+             * change button
+             */
             submitButton.setVisibility(View.INVISIBLE);
             next.setVisibility(View.VISIBLE);
         } else {
@@ -76,13 +92,12 @@ public class Second_Question extends AppCompatActivity {
             toastView.setBackgroundColor(ContextCompat.getColor(Second_Question.this, R.color.colorRed));
             ToastMessage.show();
         }
-
-
     }
 
-    //checkButton click
+    /**
+     * nextButton click
+     */
     public void next(View view) {
-
         QuestionNumber += 1;
         Intent nextQuestion = (new Intent(Second_Question.this, Third_Question.class));
         nextQuestion.putExtra("total", total);

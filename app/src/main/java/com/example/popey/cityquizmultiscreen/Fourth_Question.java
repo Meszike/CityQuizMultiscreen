@@ -17,7 +17,9 @@ import android.widget.Toast;
  */
 
 public class Fourth_Question extends AppCompatActivity {
-    //global variables
+    /**
+     * Variables and elements
+     */
     ImageView image1;
     TextView question;
     RadioGroup g1group;
@@ -31,12 +33,16 @@ public class Fourth_Question extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.radio_b);
-        //sent score as intent
+        /**
+        * Sent score as intent
+        */
         Bundle extras = getIntent().getExtras();
         total = extras.getInt("total");
         QuestionNumber = extras.getInt("QuestionNumber");
 
-        //which fourth question global variables
+        /**
+         * which fourth question's global variables
+         */
         image1 = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         g1group = findViewById(R.id.answers_1);
@@ -56,28 +62,40 @@ public class Fourth_Question extends AppCompatActivity {
 
     }
 
-
+    /**
+     * submitButton click
+     */
     public void submitButton(View view) {
-        // if there is an answer
+        /**
+         * if there is an answer
+         */
         if (q1_aButton.isChecked() || q1_bButton.isChecked() || q1_cButton.isChecked() || q1_dButton.isChecked()) {
             if (q1_dButton.isChecked()) {
-                //if answer is correct
+                /**
+                 * if answer is correct
+                 */
                 q1_dButton.setTextColor(ContextCompat.getColor(Fourth_Question.this, R.color.colorGreen));
                 solution2.setText(getString(R.string.correct));
                 total += 1;
 
             } else {
-                //if answer is not  correct
+                /**
+                 * if answer is not correct
+                 */
                 q1_aButton.setTextColor(ContextCompat.getColor(Fourth_Question.this, R.color.colorRed));
                 q1_bButton.setTextColor(ContextCompat.getColor(Fourth_Question.this, R.color.colorRed));
                 q1_cButton.setTextColor(ContextCompat.getColor(Fourth_Question.this, R.color.colorRed));
                 solution2.setText(getString(R.string.wrong_solution) + " " + (getString(R.string.q_4_d)));
             }
-            //change button
+            /**
+             * change button
+             */
             submitButton.setVisibility(View.INVISIBLE);
             next.setVisibility(View.VISIBLE);
         } else {
-            //if there is not an answer
+            /**
+             * if there is not an answer
+             */
             Toast ToastMessage = Toast.makeText(getApplicationContext(), (R.string.no_selection), Toast.LENGTH_SHORT);
             View toastView = ToastMessage.getView();
             toastView.setBackgroundColor(ContextCompat.getColor(Fourth_Question.this, R.color.colorRed));
@@ -86,7 +104,9 @@ public class Fourth_Question extends AppCompatActivity {
 
     }
 
-    //nextButton click
+    /**
+     * nextButton click
+     */
     public void next(View view) {
         QuestionNumber += 1;
         Intent nextQuestion = (new Intent(Fourth_Question.this, Fifth_Question.class));
